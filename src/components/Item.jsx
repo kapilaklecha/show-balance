@@ -1,23 +1,21 @@
 
 import React from 'react';
 
-const Item = ({ aliasName, name, address, onItemClick }) => {
-  const handleClick = () => {
-    onItemClick(); // Call the onItemClick function passed from the parent component
-  };
+const Item = ({ aliasName, name, address }) => {
+ 
 
   return (
-    <li onClick={handleClick}>
+    <div>
       <div>
-        <strong>Alias Name:</strong> {aliasName}
+         {aliasName}
       </div>
       <div>
-        <strong>Name:</strong> {name}
+        {name}
       </div>
       <div>
-        <strong>Address:</strong> {address}
+        {address}
       </div>
-    </li>
+      </div>
   );
 };
 

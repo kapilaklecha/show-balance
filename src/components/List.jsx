@@ -1,26 +1,31 @@
-
 import React from 'react';
-import Item from './Item'; // Make sure to provide the correct path to the Item component
+import { useSelector } from 'react-redux';
+import Item from './Item';
 
-const List = ({ filteredData, onItemClick }) => {
-  const handleItemClick = (itemId) => {
-    onItemClick(itemId);
-  };
+const List = ({ searchTerm, setSearchId }) => {
+  const data = useSelector((state) => state.party);
+
+  const filteredParties = data.filter((item) =>
+    item.aliasName.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
-    <ul>
-      {filteredData.map((item) => (
-        <Item
-          key={item.id}
-          aliasName={item.aliasName}
-          name={item.name}
-          address={item.address}
-          onItemClick={() => handleItemClick(item.id)}
-        />
-      ))}
-    </ul>
+    <div>
+      {searchTerm && (
+        <ul>
+          {filteredParties.map((party) => (
+            <div onClick={() => setSearchId(party.id)} key={party.id}>
+              <Item
+                aliasName={party.aliasName}
+                name={party.name}
+                address={party.address}
+              />
+            </div>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 };
 
 export default List;
-
