@@ -1,0 +1,12 @@
+.search-body {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    left: 11px;
+    top: 15px;
+}
+
+.icon {
+    margin-right: 5px;
+    color: #707070;
+}

@@ -1,7 +1,7 @@
 
 import TextField from '@mui/material/TextField';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-
+import "./SearchInput.css"
 
 const SearchInput = ({ searchValue, setSearchValue }) => {
 
@@ -9,9 +9,9 @@ const SearchInput = ({ searchValue, setSearchValue }) => {
 
   return (
     
-      <div>
+      <div className='search-body'>
         <span>
-          <AccountCircleIcon />
+          <AccountCircleIcon className='icon'/>
         </span>
         <span>
           <TextField

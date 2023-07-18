@@ -1,19 +1,20 @@
 
 import React from 'react';
+import "./Item.css"
 
 const Item = ({ aliasName, name, address }) => {
  
 
   return (
-    <div>
+    <div className='item-body'>
+    
+      <div className='item-child'>
       <div>
-         {aliasName}
+         <span className='alias-name'>{aliasName}</span><span className='real-name'>({name})</span>
       </div>
-      <div>
-        {name}
-      </div>
-      <div>
+      <div className='address'>
         {address}
+      </div>
       </div>
       </div>
   );

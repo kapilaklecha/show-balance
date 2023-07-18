@@ -1,8 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Item from './Item';
+import "./List.css"
 
-const List = ({ searchTerm, setSearchId }) => {
+const List = ({ searchTerm, setSearchId, setList }) => {
   const data = useSelector((state) => state.party);
 
   const filteredParties = data.filter((item) =>
@@ -10,11 +11,14 @@ const List = ({ searchTerm, setSearchId }) => {
   );
 
   return (
-    <div>
+    <div className='list-parent'>
       {searchTerm && (
         <ul>
           {filteredParties.map((party) => (
-            <div onClick={() => setSearchId(party.id)} key={party.id}>
+             <div onClick={() => {
+              setSearchId(party.id);
+              setList(false);
+            }} key={party.id}  className='list-item'>
               <Item
                 aliasName={party.aliasName}
                 name={party.name}

@@ -1,0 +1,24 @@
+@import '@fontsource/roboto';
+
+
+.alias-name {
+    text-align: left;
+    font: normal normal normal 14px/17px Roboto, sans-serif;
+    letter-spacing: 0px;
+    color: #868686;
+    opacity: 1;
+}
+
+.real-name {
+    margin-left: 5px;
+    color: #868686;
+    font: italic normal normal 11px/13px Roboto, sans-serif;
+}
+
+.address {
+    text-align: left;
+    font: normal normal normal 12px/14px Roboto, sans-serif;
+    letter-spacing: 0px;
+    color: #868686;
+    opacity: 1;
+}

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
-
-import TextField from './SearchInput';
 import SearchInput from './SearchInput';
-const AddPartyDetails = ({searchValue, setSearchValue}) => {
-  const [showInput, setShowInput] = useState(false);
+const AddPartyDetails = ({searchValue, setSearchValue, showInput,setShowInput }) => {
+  
 
   return (
     <div>
